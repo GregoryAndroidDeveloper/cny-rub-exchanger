@@ -3,43 +3,33 @@ services:
   postgres:
     image: postgres:18
     container_name: cny-rub-postgres
-
     environment:
-      POSTGRES_DB: cny_rub_exchange
-      POSTGRES_USER: grigorii
-      POSTGRES_PASSWORD: postgres_password
-
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
-
     volumes:
       - postgres_data:/var/lib/postgresql
-
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U grigorii -d cny_rub_exchange"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 5s
       timeout: 5s
       retries: 10
 
-
   app:
     build: .
     container_name: cny-rub-exchange
-
     depends_on:
       postgres:
         condition: service_healthy
-
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/cny_rub_exchange
-      SPRING_DATASOURCE_USERNAME: grigorii
-      SPRING_DATASOURCE_PASSWORD: postgres_password
-
+      DB_URL: ${DB_URL}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
       JWT_SECRET: ${JWT_SECRET}
-
     ports:
       - "8080:8080"
-
 
 volumes:
   postgres_data:
