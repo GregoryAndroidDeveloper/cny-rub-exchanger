@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CNY RUB Exchange</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        CNY <span>↔</span> RUB
+    </div>
+
+    <div class="header-right">
+
+        <div id="service-status" class="status">
+            ● Сервис работает
+        </div>
+
+        <div id="user-panel" class="user-panel" style="display: none;">
+
+            <span id="username-display" class="username"></span>
+
+            <button
+                    id="logout"
+                    class="logout-button"
+                    type="button">
+                Выйти
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- =========================
+         АВТОРИЗАЦИЯ
+         ========================= -->
+
+    <section id="auth-section" class="auth-section">
+
+        <h2>Авторизация</h2>
+
+        <input
+                id="username"
+                class="auth-input"
+                type="text"
+                placeholder="Имя пользователя"
+        >
+
+        <input
+                id="password"
+                class="auth-input"
+                type="password"
+                placeholder="Пароль"
+        >
+
+        <div class="auth-buttons">
+
+            <button
+                    id="login"
+                    class="auth-button"
+                    type="button">
+                Войти
+            </button>
+
+            <button
+                    id="register"
+                    class="auth-button"
+                    type="button">
+                Регистрация
+            </button>
+
+        </div>
+
+        <div
+                id="auth-message"
+                class="auth-message">
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ОБМЕН
+         ========================= -->
+
+    <section class="hero">
+
+        <h1>Обмен валют</h1>
+
+        <p>
+            Быстрый обмен китайских юаней и российских рублей
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         КУРС
+         ========================= -->
+
+    <section class="rate-card">
+
+        <div>
+
+            <span class="rate-title">
+                Текущий курс
+            </span>
+
+            <div
+                    id="rate"
+                    class="rate-value">
+                Загрузка...
+            </div>
+
+        </div>
+
+        <div class="rate-icon">
+            ¥ ₽
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         КОНВЕРТЕР
+         ========================= -->
+
+    <section class="exchange-card">
+
+        <div class="currency-block">
+
+            <div class="block-title">
+                У меня
+            </div>
+
+            <div class="currency-input">
+
+                <input
+                        id="amount"
+                        type="number"
+                        placeholder="0"
+                        min="0"
+                        step="0.01"
+                >
+
+                <select id="from">
+
+                    <option value="CNY">
+                        CNY ¥
+                    </option>
+
+                    <option value="RUB">
+                        RUB ₽
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+                id="swap"
+                class="swap-button"
+                type="button">
+            ⇅
+        </button>
+
+
+        <div class="currency-block">
+
+            <div class="block-title">
+                Получаю
+            </div>
+
+            <div class="currency-input">
+
+                <input
+                        id="result"
+                        type="number"
+                        placeholder="0"
+                        readonly
+                >
+
+                <select id="to">
+
+                    <option value="RUB">
+                        RUB ₽
+                    </option>
+
+                    <option value="CNY">
+                        CNY ¥
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+                id="exchange"
+                class="exchange-button"
+                type="button">
+            Обменять
+        </button>
+
+
+        <div
+                id="message"
+                class="message">
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ИСТОРИЯ
+         ========================= -->
+
+    <section class="history-section">
+
+        <div class="section-header">
+
+            <h2>
+                История операций
+            </h2>
+
+            <p>
+                Ваши последние обмены
+            </p>
+
+        </div>
+
+        <div
+                id="history"
+                class="history">
+            Загрузка...
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <p>
+        CNY RUB Exchange
+    </p>
+
+    <p>
+        Тестовая версия сервиса
+    </p>
+
+</footer>
+
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>

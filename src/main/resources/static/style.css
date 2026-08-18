@@ -1,0 +1,779 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Arial,
+            sans-serif;
+
+    background: #f5f7fb;
+
+    color: #171a21;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background: white;
+
+    border-bottom: 1px solid #e8eaf0;
+}
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    margin: 0 5px;
+}
+
+.status {
+
+    font-size: 14px;
+
+    color: #18a558;
+}
+
+
+/* =========================
+   CONTAINER
+   ========================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================
+   AUTH
+   ========================= */
+
+.auth-section {
+
+    margin-bottom: 30px;
+
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid #e7e9ef;
+
+    border-radius: 20px;
+
+    box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.auth-section h2 {
+
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    font-size: 24px;
+}
+
+.auth-input {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    margin-bottom: 12px;
+
+    border: 1px solid #dfe2e9;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.auth-input:focus {
+
+    border-color: #171a21;
+
+    box-shadow:
+            0 0 0 3px rgba(23, 26, 33, 0.06);
+}
+
+
+/* =========================
+   AUTH BUTTONS
+   ========================= */
+
+.auth-buttons {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.auth-button {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #171a21;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.auth-button:hover {
+
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+}
+
+.auth-button.secondary {
+
+    background: #eef0f4;
+
+    color: #171a21;
+}
+
+
+/* =========================
+   AUTH MESSAGE
+   ========================= */
+
+.auth-message {
+
+    min-height: 20px;
+
+    margin-top: 14px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   USER PANEL
+   ========================= */
+
+.user-panel {
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    padding: 14px 18px;
+
+    background: white;
+
+    border: 1px solid #e7e9ef;
+
+    border-radius: 14px;
+}
+
+#username-display {
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.logout-button {
+
+    padding: 8px 14px;
+
+    border: 1px solid #dfe2e9;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #171a21;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.logout-button:hover {
+
+    background: #f4f5f8;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+
+    margin: 0 0 10px;
+
+    font-size: 38px;
+
+    letter-spacing: -1px;
+}
+
+.hero p {
+
+    margin: 0;
+
+    color: #737886;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   RATE
+   ========================= */
+
+.rate-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 22px 25px;
+
+    margin-bottom: 18px;
+
+    background: white;
+
+    border: 1px solid #e7e9ef;
+
+    border-radius: 18px;
+
+    box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.rate-title {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #808593;
+
+    font-size: 14px;
+}
+
+.rate-value {
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.rate-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 14px;
+
+    background: #f1f3f8;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   EXCHANGE CARD
+   ========================= */
+
+.exchange-card {
+
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid #e7e9ef;
+
+    border-radius: 20px;
+
+    box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   CURRENCY
+   ========================= */
+
+.currency-block {
+
+    margin-bottom: 5px;
+}
+
+.block-title {
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #737886;
+}
+
+.currency-input {
+
+    display: flex;
+
+    width: 100%;
+
+    border: 1px solid #dfe2e9;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    transition: 0.2s;
+}
+
+.currency-input:focus-within {
+
+    border-color: #171a21;
+
+    box-shadow:
+            0 0 0 3px rgba(23, 26, 33, 0.06);
+}
+
+.currency-input input {
+
+    width: 100%;
+
+    min-width: 0;
+
+    border: none;
+
+    outline: none;
+
+    padding: 17px;
+
+    font-size: 24px;
+
+    font-weight: 600;
+}
+
+.currency-input input::placeholder {
+
+    color: #c4c7ce;
+}
+
+.currency-input select {
+
+    width: 120px;
+
+    border: none;
+
+    border-left: 1px solid #e5e7ec;
+
+    outline: none;
+
+    padding: 0 12px;
+
+    background: #fafbfc;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   SWAP
+   ========================= */
+
+.swap-button {
+
+    display: block;
+
+    width: 46px;
+
+    height: 46px;
+
+    margin: 14px auto;
+
+    border: 1px solid #dfe2e9;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.swap-button:hover {
+
+    transform: rotate(180deg);
+
+    background: #f4f5f8;
+}
+
+
+/* =========================
+   EXCHANGE BUTTON
+   ========================= */
+
+.exchange-button {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #171a21;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.exchange-button:hover {
+
+    transform: translateY(-1px);
+
+    opacity: 0.9;
+}
+
+.exchange-button:active {
+
+    transform: translateY(0);
+}
+
+.exchange-button:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================
+   MESSAGE
+   ========================= */
+
+.message {
+
+    min-height: 22px;
+
+    margin-top: 14px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    color: #18a558;
+}
+
+
+/* =========================
+   HISTORY
+   ========================= */
+
+.history-section {
+    margin-top: 40px;
+}
+
+.section-header h2 {
+    margin: 0 0 5px;
+    font-size: 24px;
+}
+
+.section-header p {
+    margin: 0 0 18px;
+    color: #808593;
+    font-size: 14px;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-item {
+    padding: 18px 20px;
+
+    background: white;
+
+    border: 1px solid #e7e9ef;
+    border-radius: 14px;
+
+    transition: 0.2s;
+}
+
+.history-item:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.history-item strong {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #171a21;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
+}
+
+.history-item {
+    color: #737886;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.history-item small {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    color: #858995;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #9296a1;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding: 0 18px;
+    }
+
+    .logo {
+
+        font-size: 18px;
+    }
+
+    .status {
+
+        font-size: 12px;
+    }
+
+    .container {
+
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+
+        font-size: 30px;
+    }
+
+    .exchange-card {
+
+        padding: 20px;
+    }
+
+    .currency-input input {
+
+        font-size: 20px;
+    }
+
+    .currency-input select {
+
+        width: 105px;
+    }
+
+    .auth-section {
+
+        padding: 20px;
+    }
+
+    .auth-buttons {
+
+        flex-direction: column;
+    }
+
+    .user-panel {
+
+        gap: 10px;
+    }
+
+    #username-display {
+
+        font-size: 13px;
+    }
+}
+/* =========================
+   HEADER RIGHT
+   ========================= */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* =========================
+   USER PANEL
+   ========================= */
+
+.user-panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logout-button {
+    padding: 8px 13px;
+
+    border: 1px solid #dfe2e9;
+    border-radius: 9px;
+
+    background: white;
+    color: #171a21;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.logout-button:hover {
+    background: #f4f5f8;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .header-right {
+        gap: 8px;
+    }
+
+    .status {
+        display: none;
+    }
+
+    .username {
+        display: none;
+    }
+
+    .logout-button {
+        padding: 7px 10px;
+    }
+}
